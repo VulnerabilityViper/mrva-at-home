@@ -1,0 +1,10 @@
+opencv/opencv
+netdata/netdata
+redis/redis
+protocolbuffers/protobuf
+tesseract-ocr/tesseract
+grpc/grpc
+nlohmann/json
+wg/wrk
+google/leveldb
+curl/curl
