@@ -56,7 +56,7 @@ mkdir ${path}/${lang}/sarif-files
 echo mkdir ${path}/${lang}/sarif-files/'$(date '+%Y-%m-%d')/ \nwhile read line;\
     do codeql database analyze -j=-2 '${path}/${lang}/databases/'$(date '+%Y-%m-%d')/$line/\
     --format=sarif-latest --output='${path}/${lang}/sarif-files/'$(date '+%Y-%m-%d')/results_${line}_$(date '+%Y-%m-%d').sarif;\
-    done < '${path}/${lang}'/scripts/files.txt' > ${path}/${lang}/scripts/database_analyze.sh
+    done < '${path}/${lang}'/scripts/files.txt' > ${path}/${lang}/scripts/analyze_databases.sh
 
 echo 'while read line; do codeql database create -j=-2 '${path}/${lang}'/databases/$(date '+%Y-%m-%d')/$line/\
     --language='${lang}' --source-root='${path}/${lang}'/repos/$line/; done < '${path}/${lang}/scripts/files.txt\
